@@ -14,17 +14,4 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-// // Handle token expiration (401 responses)
-// api.interceptors.response.use(
-//   (response) => response,
-//   (error) => {
-//     if (error.response?.status === 401) {
-//       // Token expired or invalid
-//       localStorage.removeItem("access_token");
-//       window.location.href = "/login"; // Force redirect to login
-//     }
-//     return Promise.reject(error);
-//   }
-// );
-
 export default api;
